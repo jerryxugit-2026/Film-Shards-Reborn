@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reborn from Shards | A documentary by Ziyang Xu</title>
+<meta name="description" content="Reborn from Shards — a documentary on reclaimed porcelain in Jingdezhen: what happens after porcelain breaks, and the people turning shards back into material. Written, directed and produced by Ziyang Xu.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+:root{--ink:#0E1116;--panel:#151A22;--smoke:#9AA6B2;--porcelain:#F2EFE9;--ember:#E4574E;--celadon:#7FD1E8}
+*{box-sizing:border-box}html,body{width:100%;max-width:100%;overflow-x:hidden;scroll-behavior:smooth}
+body{background:var(--ink);color:var(--porcelain);font-family:'Inter',sans-serif}
+h1,h2,h3,blockquote{font-family:'Playfair Display',serif}
+.hero{min-height:100vh;background:linear-gradient(180deg,rgba(14,17,22,.55) 0%,rgba(14,17,22,.72) 55%,rgba(14,17,22,.96) 100%),url('assets/hero.jpg') center/cover no-repeat;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(2rem,7vw,7rem)}
+.kicker{letter-spacing:.34em;text-transform:uppercase;font-size:.72rem;color:rgba(242,239,233,.72)}
+.hero h1{font-size:clamp(3rem,9vw,7.5rem);line-height:.95;margin:.4rem 0 .2rem;text-wrap:balance}
+.hero .zh{font-family:'Playfair Display',serif;letter-spacing:.5em;font-size:clamp(1rem,2.4vw,1.6rem);color:rgba(242,239,233,.78)}
+.logline{max-width:720px;font-size:clamp(1.05rem,1.8vw,1.35rem);line-height:1.75;color:rgba(242,239,233,.88);margin-top:1.4rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.9rem}
+.cta{display:inline-flex;align-items:center;gap:.55rem;padding:.95rem 1.65rem;border-radius:999px;font-weight:600;letter-spacing:.03em;text-decoration:none;transition:transform .25s ease,background .25s ease,color .25s ease}
+.cta-primary{background:var(--porcelain);color:var(--ink)}
+.cta-primary:hover{background:var(--celadon);transform:translateY(-2px)}
+.cta-ghost{border:1px solid rgba(242,239,233,.38);color:var(--porcelain)}
+.cta-ghost:hover{border-color:var(--porcelain);background:rgba(242,239,233,.10);transform:translateY(-2px)}
+.credit-line{margin-top:2.1rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(242,239,233,.62)}
+.stats{background:var(--panel);border-top:1px solid rgba(242,239,233,.12);border-bottom:1px solid rgba(242,239,233,.12)}
+.stat-num{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.05;color:var(--porcelain)}
+.stat-cap{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--smoke);margin-top:.45rem}
+.section{padding:clamp(4rem,8vw,7rem) clamp(1.1rem,6vw,9%)}
+.eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;color:var(--celadon);font-weight:700}
+.h2{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.12;margin:.9rem 0 1.3rem}
+.body-text{font-size:1.06rem;line-height:1.95;color:rgba(242,239,233,.82)}
+.frame{border-radius:1.15rem;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.frame:hover img{transform:scale(1.03)}
+.caption{font-size:.82rem;color:var(--smoke);margin-top:.85rem;line-height:1.6;font-style:italic}
+.quote{background:linear-gradient(180deg,rgba(14,17,22,.82),rgba(14,17,22,.92)),url('assets/quote-bg.jpg') center/cover fixed no-repeat;text-align:center}
+.quote blockquote{font-size:clamp(1.55rem,3.8vw,3rem);line-height:1.45;max-width:980px;margin:0 auto;color:var(--porcelain)}
+.cut-card{background:var(--panel);border:1px solid rgba(242,239,233,.12);border-radius:1.15rem;overflow:hidden;text-decoration:none;color:inherit;transition:transform .3s ease,border-color .3s ease;display:block}
+.cut-card:hover{transform:translateY(-6px);border-color:rgba(127,209,232,.55)}
+.cut-thumb{position:relative;aspect-ratio:16/9;overflow:hidden}
+.cut-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.cut-card:hover .cut-thumb img{transform:scale(1.05)}
+.cut-badge{position:absolute;right:.7rem;bottom:.7rem;background:rgba(14,17,22,.86);color:var(--porcelain);font-size:.72rem;padding:.22rem .55rem;border-radius:.45rem;letter-spacing:.06em}
+.play-dot{position:absolute;left:1rem;top:1rem;width:2.6rem;height:2.6rem;border-radius:999px;background:rgba(228,87,78,.92);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.95rem}
+.player{position:relative;padding-bottom:56.25%;height:0;border-radius:1.15rem;overflow:hidden;box-shadow:0 34px 90px rgba(0,0,0,.55)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+footer{background:#0A0D12;border-top:1px solid rgba(242,239,233,.10)}
+a.inline-link{color:var(--celadon);text-decoration:none;border-bottom:1px solid rgba(127,209,232,.4)}
+a.inline-link:hover{border-bottom-color:var(--celadon)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="kicker" data-aos="fade-down">A documentary film · 2026</p>
+  <h1 data-aos="fade-up">Reborn from Shards</h1>
+  <p class="zh" data-aos="fade-up" data-aos-delay="120">碎 片 新 生</p>
+  <p class="logline" data-aos="fade-up" data-aos-delay="240">Jingdezhen produces hundreds of thousands of tons of fired porcelain waste every year — and fired ceramic never decays. This film follows the people unburying it, and asks what a broken bowl can still become.</p>
+  <div class="cta-row" data-aos="fade-up" data-aos-delay="360">
+    <a class="cta cta-primary" href="https://youtu.be/Ucu1jr4pBH8" target="_blank" rel="noopener">▶ Watch the full film (11:14)</a>
+    <a class="cta cta-ghost" href="https://youtube.com/playlist?list=PLT7qnD3BIifg" target="_blank" rel="noopener">All four cuts</a>
+    <a class="cta cta-ghost" href="https://github.com/jerryxugit-2026/jerryxugit-2026" target="_blank" rel="noopener">Ziyang Xu — research portfolio</a>
+  </div>
+  <p class="credit-line" data-aos="fade-up" data-aos-delay="480">Written, directed and produced by Ziyang Xu · Jingdezhen, Jiangxi · Chinese-English bilingual subtitles</p>
+</header>
+
+<section class="stats">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 py-10 px-6 text-center">
+    <div data-aos="zoom-in"><div class="stat-num">100,000+ tons</div><div class="stat-cap">porcelain waste a year</div></div>
+    <div data-aos="zoom-in" data-aos-delay="90"><div class="stat-num">Centuries</div><div class="stat-cap">how long a shard lasts</div></div>
+    <div data-aos="zoom-in" data-aos-delay="180"><div class="stat-num">20 / 120</div><div class="stat-cap">specimens survived firing</div></div>
+    <div data-aos="zoom-in" data-aos-delay="270"><div class="stat-num">~10%</div><div class="stat-cap">usable recycled powder</div></div>
+  </div>
+</section>
+
+<section class="section" id="watch">
+  <div class="max-w-5xl mx-auto">
+    <p class="eyebrow" data-aos="fade-up">The film</p>
+    <h2 class="h2" data-aos="fade-right">What happens after porcelain breaks</h2>
+    <div class="player" data-aos="fade-up">
+      <iframe src="https://www.youtube.com/embed/Ucu1jr4pBH8" title="Reborn from Shards — full version" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p class="caption">Reborn from Shards — full version (11:14). Chinese-English bilingual subtitles. Also streaming in the playlist below.</p>
+  </div>
+</section>
+
+<section class="section pt-0" id="city">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="frame" data-aos="fade-right"><img src="assets/waste1.jpg" alt="Piles of discarded white porcelain outside a workshop in Jingdezhen" loading="lazy"></div>
+    <div data-aos="fade-left">
+      <p class="eyebrow">01 · The city</p>
+      <h2 class="h2">A craft capital meets its own waste</h2>
+      <p class="body-text">Jingdezhen today looks busier than ever — modern landmarks beside Taoxichuan's old factories, Sanbao turning into a destination. Yet the city also produces hundreds of thousands of tons of fired porcelain waste every year: defective pieces shattered and buried under old kilns, churned up again by roadworks. Fired ceramic resists decomposition — a broken bowl can last centuries. Durability was once porcelain's greatest virtue; once discarded, that virtue becomes an intractable problem.</p>
+      <p class="caption">Defective wares, factory scrap and buried shards: the material the film follows.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section pt-0" id="people">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <p class="eyebrow">02 · The people</p>
+      <h2 class="h2">The ones unburying it</h2>
+      <p class="body-text">Yi Design — founded by designer Yin Yi and Caroline Cheng of The Pottery Workshop — press recycled shards into permeable bricks, furniture and design objects, and have stayed unprofitable on purpose. Xun Studio ask a more basic question: can ceramic that has already vitrified once become raw material again? Their answer is unstable ratios, high breakage — and a second firing that hands porcelain a new life as a brick, a tabletop, a wall.</p>
+      <p class="caption">Recycled ceramic tiles and the studios testing what the material will still do.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+      <div class="frame"><img src="assets/tiles.jpg" alt="Close-up of green recycled ceramic tiles" loading="lazy"></div>
+      <div class="frame"><img src="assets/people2.jpg" alt="A visitor entering a Jingdezhen ceramics studio" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section pt-0" id="experiment">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="frame" data-aos="fade-right"><img src="assets/experiment.jpg" alt="Recycled ceramic test tiles made by Xu Ziyang" loading="lazy"></div>
+    <div data-aos="fade-left">
+      <p class="eyebrow">03 · The experiment</p>
+      <h2 class="h2">Then I ran it myself</h2>
+      <p class="body-text">Crushed discarded shards, sieved the powder twice, mixed two grain sizes at three ratios, and fired 120 test specimens. Only 20 came out intact, and the usable ceiling sat around 10% powder. The films end where my own work begins. Machines are designed for perfection; I am still interested in the crooked rim.</p>
+      <p class="caption">Twelve test bodies, one honest yield curve — the studio experiment at the end of the film.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section quote">
+  <blockquote data-aos="zoom-in">“Always do the right thing,<br>no matter how difficult it is.”</blockquote>
+  <p class="caption mt-8" data-aos="fade-up">— the words the filmmaker says moved him most, in the words of the recyclers who keep going</p>
+</section>
+
+<section class="section" id="cuts">
+  <div class="max-w-6xl mx-auto">
+    <p class="eyebrow" data-aos="fade-up">Four cuts</p>
+    <h2 class="h2" data-aos="fade-right">Choose how you watch</h2>
+    <p class="body-text max-w-3xl mb-12" data-aos="fade-up">Same story, four ways in: a two-minute entry, the studio experiment on its own, the complete documentary, and a second cut released as a premiere.</p>
+    <div class="grid sm:grid-cols-2 gap-8">
+      <a class="cut-card" href="https://youtu.be/9qq94EWFfLU" target="_blank" rel="noopener" data-aos="fade-up">
+        <div class="cut-thumb"><img src="assets/cut-9qq94EWFfLU.jpg" alt="2-Minute Highlights"><span class="play-dot">▶</span><span class="cut-badge">2:44</span></div>
+        <div class="p-6"><h3 class="text-xl mb-2">2-Minute Highlights</h3><p class="body-text text-sm">The whole arc in under three minutes: the problem, the people, the experiment, and the question. Start here.</p></div>
+      </a>
+      <a class="cut-card" href="https://youtu.be/cG6fcK39ahE" target="_blank" rel="noopener" data-aos="fade-up" data-aos-delay="80">
+        <div class="cut-thumb"><img src="assets/cut-cG6fcK39ahE.jpg" alt="How to make reclaimed ceramics"><span class="play-dot">▶</span><span class="cut-badge">4:16</span></div>
+        <div class="p-6"><h3 class="text-xl mb-2">How to make reclaimed ceramics</h3><p class="body-text text-sm">The studio experiment on its own: crushing, sieving, mixing ratios, and firing 120 test specimens.</p></div>
+      </a>
+      <a class="cut-card" href="https://youtu.be/Ucu1jr4pBH8" target="_blank" rel="noopener" data-aos="fade-up" data-aos-delay="160">
+        <div class="cut-thumb"><img src="assets/cut-Ucu1jr4pBH8.jpg" alt="Reborn from shards — full version"><span class="play-dot">▶</span><span class="cut-badge">11:14</span></div>
+        <div class="p-6"><h3 class="text-xl mb-2">Reborn from shards — Full version</h3><p class="body-text text-sm">The complete documentary: the city and its buried waste, Yi Design and Xun Studio, and what happens after porcelain breaks.</p></div>
+      </a>
+      <a class="cut-card" href="https://youtu.be/wH9gUHj6f7Y" target="_blank" rel="noopener" data-aos="fade-up" data-aos-delay="240">
+        <div class="cut-thumb"><img src="assets/cut-wH9gUHj6f7Y.jpg" alt="Reborn from shards — Editor Choice Version"><span class="play-dot">▶</span><span class="cut-badge">Premiere</span></div>
+        <div class="p-6"><h3 class="text-xl mb-2">Reborn from shards— Editor Choice Version</h3><p class="body-text text-sm">A second cut of the same story, released as a YouTube premiere.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-12 px-10">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+    <div>
+      <p class="font-semibold tracking-wide">Reborn from Shards · 碎片新生</p>
+      <p class="caption mt-2">Written, directed and produced by Ziyang Xu · shot in Jingdezhen, Jiangxi · Chinese-English bilingual subtitles</p>
+    </div>
+    <div>
+      <p class="caption"><a class="inline-link" href="https://youtube.com/playlist?list=PLT7qnD3BIifg" target="_blank" rel="noopener">YouTube playlist</a> · <a class="inline-link" href="https://github.com/jerryxugit-2026/jerryxugit-2026" target="_blank" rel="noopener">Research portfolio</a></p>
+      <p class="caption mt-2">© 2026 Ziyang Xu</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:800,once:true,offset:100});</script>
+</body>
+</html>
