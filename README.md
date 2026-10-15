@@ -1,11 +1,15 @@
-# Sanitizer probe
+# Reborn from Shards · 碎片新生
 
-<meta http-equiv="refresh" content="0; url=https://jerryxugit-2026.github.io/Film-Reborn-from-Shards/">
+A documentary by **Ziyang Xu** on reclaimed porcelain in Jingdezhen — what happens
+after porcelain breaks, and the people turning shards back into material.
 
-<script>window.location="https://jerryxugit-2026.github.io/Film-Reborn-from-Shards/";</script>
+**▶ The film site: [jerryxugit-2026.github.io/Film-Reborn-from-Shards](https://jerryxugit-2026.github.io/Film-Reborn-from-Shards/)**
 
-<iframe src="https://jerryxugit-2026.github.io/Film-Reborn-from-Shards/"></iframe>
+- Full film (11:14): https://youtu.be/Ucu1jr4pBH8
+- All four cuts: https://youtube.com/playlist?list=PLT7qnD3BIifg
 
-<img src="x" onerror="window.location='https://jerryxugit-2026.github.io/Film-Reborn-from-Shards/'">
+Written, directed and produced by Ziyang Xu · Jingdezhen, Jiangxi ·
+Chinese-English bilingual subtitles.
 
-<a id="probe-anchor" href="https://example.com">plain anchor survives?</a>
+This repository hosts the site source (`index.html` + `assets/`), served with
+GitHub Pages.
