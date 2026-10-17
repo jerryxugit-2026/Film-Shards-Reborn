@@ -1,9 +1,9 @@
-# Reborn from Shards · 碎片新生
+# Shards Reborn · 碎片新生
 
 A documentary by **Ziyang Xu** on reclaimed porcelain in Jingdezhen — what happens
 after porcelain breaks, and the people turning shards back into material.
 
-**▶ The film site: [jerryxugit-2026.github.io/Film-Reborn-from-Shards](https://jerryxugit-2026.github.io/Film-Reborn-from-Shards/)**
+**▶ The film site: [jerryxugit-2026.github.io/Film-Shards-Reborn](https://jerryxugit-2026.github.io/Film-Shards-Reborn/)**
 
 - Full film (11:14): https://youtu.be/Ucu1jr4pBH8
 - All four cuts: https://youtube.com/playlist?list=PLT7qnD3BIifg
